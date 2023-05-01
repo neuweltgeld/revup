@@ -1,5 +1,6 @@
 # Review Rollup (RevUp)
 **Review Rollup (RevUp)** is a blockchain built with [Ignite CLI](https://ignite.com/cli).
+You can find the automatic installation script at the end for the setup.
 
 ## Get started
 
