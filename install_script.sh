@@ -14,14 +14,14 @@ echo " |    |   \  ___/\   /|    |  / |  |_> >                                  
 echo " |____|_  /\___  >\_/ |______/  |   __/                                                          "
 echo "        \/     \/               |__|                                                             "
 echo " Discord irlandali_turist#7300 // Geralt"
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
-echo ""
+echo "                                                                                                 "
+echo "                                                                                                 "
+echo "                                                                                                 "
+echo "                                                                                                 "
+echo "                                                                                                 "
+echo "                                                                                                 "
+echo "                                                                                                 "
+echo "                                                                                                 "
 
 sleep 1
 
