@@ -59,7 +59,21 @@ Using the example UI, you can do the following:
 
 
 ### Install
-For the installation steps, you can visit the install page to obtain detailed information.
+
+You can follow these steps for the installation. Since it is an automatic script, with a few clicks, the rollup will be ready.
+
+For RevUp to work, you need to have a synchronized testnet node. Don't forget that you need to have enough test TIA in your wallet. Otherwise, RevUp will not work. The default gas price is 6000utia.
+
+
+``` 
+wget https://raw.githubusercontent.com/neuweltgeld/revup/main/install_script.sh && bash install_script.sh 
+```
+
+If wget is not installed, you can install it with the following command.
+
+```
+apt install wget
+```
 
 
 ## Learn more
