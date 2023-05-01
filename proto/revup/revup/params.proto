@@ -1,0 +1,12 @@
+syntax = "proto3";
+package revup.revup;
+
+import "gogoproto/gogo.proto";
+
+option go_package = "revup/x/revup/types";
+
+// Params defines the parameters for the module.
+message Params {
+  option (gogoproto.goproto_stringer) = false;
+  
+}

@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package revup.revup;
+
+option go_package = "revup/x/revup/types";
+
+// Msg service for creating reviews
+service Msg {
+  rpc CreateReview (MsgCreateReview) returns (MsgCreateReviewResponse);
+}
+
+// MsgCreateReview represents the fields required to create a new review
+message MsgCreateReview {
+  string creator = 1; // User who created the review
+  string product = 2; // Product the review is for
+  string rate    = 3; // Rating given by the user
+  string comment = 4; // Additional comments by the user
+}
+
+// MsgCreateReviewResponse is sent as a response after successfully creating a review
+message MsgCreateReviewResponse {
+  uint64 id = 1; // Unique identifier for the review
+}

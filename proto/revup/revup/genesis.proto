@@ -1,0 +1,12 @@
+syntax = "proto3";
+package revup.revup;
+
+import "gogoproto/gogo.proto";
+import "revup/revup/params.proto";
+
+option go_package = "revup/x/revup/types";
+
+// GenesisState defines the revup module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}

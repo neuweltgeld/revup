@@ -1,0 +1,48 @@
+syntax = "proto3";
+
+package revup.revup;
+
+import "gogoproto/gogo.proto";
+import "google/api/annotations.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+import "revup/revup/params.proto";
+import "revup/revup/revup.proto";
+
+option go_package = "revup/x/revup/types";
+
+// Query defines the gRPC querier service for the module.
+service Query {
+  
+  // Params queries the parameters of the module.
+  rpc Params (QueryParamsRequest) returns (QueryParamsResponse) {
+    option (google.api.http).get = "/revup/revup/params";
+  
+  }
+  
+  // Comments queries a list of Comments items.
+  rpc Comments (QueryCommentsRequest) returns (QueryCommentsResponse) {
+    option (google.api.http).get = "/revup/revup/comments";
+  
+  }
+}
+
+// QueryParamsRequest is the request type for the Query/Params RPC method.
+message QueryParamsRequest {}
+
+// QueryParamsResponse is the response type for the Query/Params RPC method.
+message QueryParamsResponse {
+  
+  // params holds all the parameters of this module.
+  Params params = 1 [(gogoproto.nullable) = false];
+}
+
+// QueryCommentsRequest is the request type for the Query/Comments RPC method.
+message QueryCommentsRequest {
+  cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+
+// QueryCommentsResponse is the response type for the Query/Comments RPC method.
+message QueryCommentsResponse {
+  repeated Review Review = 1;
+  cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}

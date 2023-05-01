@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package revup.revup;
+
+option go_package = "revup/x/revup/types";
+
+// Review message definition
+message Review {
+  string creator = 1; // User who created the review
+  uint64 id = 2;      // Unique identifier for the review
+  string product = 3; // Product the review is for
+  string rate = 4;    // Rating given by the user
+  string comment = 5; // Additional comments by the user
+}
