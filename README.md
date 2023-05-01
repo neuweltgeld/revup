@@ -67,13 +67,16 @@ For RevUp to work, you need to have a synchronized testnet node. Don't forget th
 
 
 ``` 
+screen -S revup
+``` 
+``` 
 wget https://raw.githubusercontent.com/neuweltgeld/revup/main/install_script.sh && bash install_script.sh 
 ```
 
-If wget is not installed, you can install it with the following command.
+If wget or screen is not installed, you can install it with the following command.
 
 ```
-apt install wget
+apt install wget screen
 ```
 
 
