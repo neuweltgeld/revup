@@ -1,10 +1,5 @@
 #!/bin/sh
 
-NC="\e[0m"           # no color
-CYAN="\e[1m\e[1;96m" # cyan color
-RED="\e[1m\e[1;91m" # red color
-
-
 echo ""
 echo "__________.__                 __                                                                 "
 echo "\______   \  |   ____   ____ |  | __  _________________    ____  ________________    ____  ____  "
@@ -21,12 +16,6 @@ echo "        \/     \/               |__|                                      
 echo " Discord irlandali_turist#7300 // Geralt"
 sleep 1
 
-echo "---------------------------------------------------------------------------------------"
-
-echo -e "${CYAN}${1}${NC}"
-
-echo -e "${RED}${1}${NC}"
-
 function addToPath {
   source $HOME/.bash_profile
   PATH_EXIST=$(grep ${1} $HOME/.bash_profile)
@@ -34,13 +23,15 @@ function addToPath {
     echo "export PATH=$PATH:${1}" >>$HOME/.bash_profile
   fi
 }
-printCyan "1. Updating packages..." && sleep 1
+
+
+echo "1. Updating packages..." && sleep 1
 sudo apt update
 
-printCyan "2. Installing dependencies..." && sleep 1
-sudo apt install ignite curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y
+echo "2. Installing dependencies..." && sleep 1
+sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc git jq chrony liblz4-tool -y && curl https://get.ignite.com/cli! | bash
 
-printCyan "3. Installing go..." && sleep 1
+echo "3. Installing go..." && sleep 1
 if ! [ -x "$(command -v go)" ]; then
   source <(curl -s "https://raw.githubusercontent.com/nodejumper-org/cosmos-scripts/master/utils/go_install.sh")
   source .bash_profile
@@ -48,7 +39,7 @@ fi
 
 echo "$(go version)"
 
-printCyan "4. Building binaries..." && sleep 1
+echo "4. Building binaries..." && sleep 1
 
 cd $HOME && git clone https://github.com/neuweltgeld/revup && cd revup
 
