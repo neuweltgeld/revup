@@ -78,7 +78,11 @@ If wget or screen is not installed, you can install it with the following comman
 ```
 apt install wget screen
 ```
+## Planned Features
 
+- Keplr waller entegration. Users can write comment using their own unique wallet.
+- Custom product adding
+- Pagination and custom filtering based on negative, positive rate or product name. 
 
 ## Learn more
 
